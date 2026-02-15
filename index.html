@@ -5,6 +5,18 @@
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="manifest" href="manifest.json">
 <title>Textarea</title>
+<script>
+  (() => {
+    const path = window.location.pathname.replace(/^\/+/, '')
+    const target = new URL(path ? `/til/${path}` : '/til', 'https://maheshrijal.com')
+    target.search = window.location.search
+    target.hash = window.location.hash
+    window.location.replace(target.toString())
+  })()
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=https://maheshrijal.com/til">
+</noscript>
 <style>
   * {
     margin: 0;
